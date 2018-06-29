@@ -4,7 +4,7 @@ import styles from "./styles.module.css";
 class Header extends Component {
     render() {
         return (
-            <div className={styles.block}>header</div>
+            <div className={styles.block}>Header</div>
         );
     }
 }
