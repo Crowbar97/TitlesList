@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import styles from "./styles.module.css"
 
-class Page extends Component {
+class App extends Component {
     render() {
         return (
             <div>base</div>
@@ -10,4 +10,4 @@ class Page extends Component {
     }
 }
 
-export default Page;
+export default App;
