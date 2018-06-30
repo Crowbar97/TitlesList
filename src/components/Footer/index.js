@@ -4,8 +4,7 @@ import styles from "./styles.module.css";
 class Footer extends Component {
     render() {
         return (
-            <div>base</div>
-            // layout
+            <div className={styles.block}>Sticky Footer</div>
         );
     }
 }

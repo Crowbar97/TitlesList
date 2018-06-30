@@ -6,7 +6,7 @@ class SearchPanel extends Component {
         return (
             <div className={styles.block}>
                 <input className={styles.input} placeholder="Search"/>
-                <button className={styles.button}> Go </button>
+                <button className={styles.button}>Go</button>
             </div>
         );
     }
