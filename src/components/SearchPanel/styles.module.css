@@ -1,9 +1,10 @@
 .block {
-    width: 100%;
+    width: auto;
     height: 40px;
     background-color: #d2d3d5;
     color: #272727;
     padding: 30px 20px;
+    margin-bottom: 8px;
 }
 
 .input {
