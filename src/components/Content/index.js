@@ -7,12 +7,10 @@ import { observer } from 'mobx-react';
 @observer
 class Content extends Component {
     render() {
-        var key = 0;
-        var itemList = store.itemList.map(item => (<Item item={item} key={key++}/>));
         return (
-                <div className={styles.block}>
-                    <ul>{itemList}</ul>
-                </div>
+            <div className={styles.block}>
+                {store.itemList.map(item => (<Item title={item.title} text={item.text} key={item.key}/>))}
+            </div>
         );
     }
 }
