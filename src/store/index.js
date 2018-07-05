@@ -2,7 +2,7 @@ import { observable } from 'mobx';
 
 class Store {
 
-    @observable itemList = [];
+    @observable itemList = [{title: 1, text: 1, key: 1}, {title: 2, text: 2, key: 2}];
 
     constructor() {
         this.filter = "";
