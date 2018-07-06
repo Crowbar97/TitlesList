@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import styles from "./styles.module.css";
 import store from "../../store/index";
-import { observable } from 'mobx';
+import { observable, action } from 'mobx';
 import { observer } from 'mobx-react';
 
 @observer
@@ -14,7 +14,7 @@ class SearchPanel extends Component {
         this.fetchItems = this.fetchItems.bind(this);
     }
 
-    refreshFilter(event) {
+    @action refreshFilter(event) {
         this.filter = event.target.value;
     }
 
