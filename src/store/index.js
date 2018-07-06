@@ -1,7 +1,7 @@
 import { observable, action } from 'mobx';
 
 class Store {
-    @observable itemList = [{ title: 1, text: 1, key: 1 }, { title: 2, text: 2, key: 2 }];
+    @observable itemList = [];
 
     constructor() {
         this.fetchItems = this.fetchItems.bind(this);
@@ -16,7 +16,7 @@ class Store {
         fetch(this.getUrlByFilter(filter))
             .then(
                 response => response.json(),
-                error => console.log("Fetch error: " + error)
+                error => console.log("Fetch error: " + error + "\n")
             )
             .then(
                 jsonArray => {
@@ -25,8 +25,9 @@ class Store {
                         console.log(this.itemList.length + " item(s) were fetched.\n");
                     }
                 },
-                error => console.log("JSON parsing error: " + error)
+                error => console.log("JSON parsing error: " + error + "\n")
             );
+        console.log("Fetch request was successfully sended!\n");
     }
 }
 
