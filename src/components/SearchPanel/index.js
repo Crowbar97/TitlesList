@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import styles from "./styles.module.css";
-import store from "../../store/index";
 import { observable, action } from 'mobx';
-import { observer } from 'mobx-react';
+import { observer, inject } from 'mobx-react';
 
+@inject("store")
 @observer
 class SearchPanel extends Component {
     @observable filter = "";
@@ -19,7 +19,7 @@ class SearchPanel extends Component {
     }
 
     fetchItems(event) {
-        store.fetchItems(this.filter);
+        this.props.store.fetchItems(this.filter);
         event.preventDefault();
     }
 
