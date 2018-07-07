@@ -9,14 +9,14 @@ class Store {
 
     @action async fetchItems(filter) {
         try {
-            console.log("Fetching data with filter \"" + filter + "\"...\n");
+            console.log(`Fetching data with filter "${filter}"...\n`);
             const response = await fetch(this.getUrlByFilter(filter));
             const jsonData = await response.json();
-            this.itemList = jsonData.items.map(item => ({ title: item.title, text: item.place_of_publication, key: item.id }));
-            console.log(this.itemList.length + " item(s) were fetched.\n");
+            this.itemList = jsonData.items.map((item, index) => ({ title: item.title, text: item.place_of_publication, key: index }));
+            console.log(`${this.itemList.length} item(s) were fetched.\n`);
         }
         catch (e) {
-            console.log("Error " + e.name + ": " + e.message + "\n" + e.stack);
+            console.log(`Error ${e.name}: ${e.message}\n ${e.stack}`);
         }
     }
 }
