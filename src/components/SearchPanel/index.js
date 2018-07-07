@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import styles from "./styles.module.css";
-import { observable, action } from 'mobx';
+import { observable, action, computed } from 'mobx';
 import { observer, inject } from 'mobx-react';
 
 @inject("store")
@@ -18,6 +18,10 @@ class SearchPanel extends Component {
         this.filter = event.target.value;
     }
 
+    @computed get filterIsEmpty() {
+        return this.filter === "";
+    }
+
     fetchItems(event) {
         this.props.store.fetchItems(this.filter);
         event.preventDefault();
@@ -28,7 +32,7 @@ class SearchPanel extends Component {
             <div className={styles.block}>
                 <form onSubmit={this.fetchItems}>
                     <input type="text" onChange={this.refreshFilter} className={styles.input} placeholder="Search"/>
-                    <input type="submit" value="Go" disabled={this.filter===""} className={styles.button} />
+                    <input type="submit" value="Go" disabled={this.filterIsEmpty} className={styles.button} />
                 </form>
             </div>
         );

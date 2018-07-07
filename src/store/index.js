@@ -3,10 +3,6 @@ import { observable, action } from 'mobx';
 class Store {
     @observable itemList = [];
 
-    constructor() {
-        this.fetchItems = this.fetchItems.bind(this);
-    }
-
     getUrlByFilter(filter) {
         return `https://chroniclingamerica.loc.gov/search/titles/results/?terms=${filter}&format=json&page=1`;
     }
