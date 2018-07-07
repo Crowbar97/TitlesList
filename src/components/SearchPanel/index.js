@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import styles from "./styles.module.css";
-import { observable, action, computed } from 'mobx';
+import { observable, computed } from 'mobx';
 import { observer, inject } from 'mobx-react';
 
 @inject("store")
