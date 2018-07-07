@@ -1,5 +1,17 @@
 import { observable, action } from 'mobx';
 
+class Item {
+    @observable title;
+    @observable text;
+    @observable id;
+
+    constructor(title, text, id) {
+        this.title = title;
+        this.text = text;
+        this.id = id;
+    }
+}
+
 class Store {
     @observable itemList = [];
 
@@ -12,7 +24,7 @@ class Store {
             console.log(`Fetching data with filter "${filter}"...\n`);
             const response = await fetch(this.getUrlByFilter(filter));
             const jsonData = await response.json();
-            this.itemList = jsonData.items.map((item, index) => ({ title: item.title, text: item.place_of_publication, key: index }));
+            this.itemList = jsonData.items.map((item, index) => (new Item(item.title, item.place_of_publication, index)));
             console.log(`${this.itemList.length} item(s) were fetched.\n`);
         }
         catch (e) {

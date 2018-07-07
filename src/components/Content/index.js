@@ -9,7 +9,7 @@ class Content extends Component {
     render() {
         return (
             <div className={styles.block}>
-                {this.props.store.itemList.map(item => (<Item title={item.title} text={item.text} key={item.key} />))}
+                {this.props.store.itemList.map(item => (<Item title={item.title} text={item.text} key={item.id} />))}
             </div>
         );
     }
