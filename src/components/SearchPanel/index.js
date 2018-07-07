@@ -4,7 +4,7 @@ import { observable, action, computed } from 'mobx';
 import { observer, inject } from 'mobx-react';
 
 @inject("store")
-@observer
+@observer   
 class SearchPanel extends Component {
     @observable filter = "";
 
@@ -14,7 +14,7 @@ class SearchPanel extends Component {
         this.fetchItems = this.fetchItems.bind(this);
     }
 
-    @action refreshFilter(event) {
+    refreshFilter(event) {
         this.filter = event.target.value;
     }
 
