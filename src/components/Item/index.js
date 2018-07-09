@@ -1,15 +1,19 @@
 import React, { Component } from 'react';
-import styles from "./styles.module.css";
+import Block from "./styles/Block";
+import FirstLayer from "./styles/FirstLayer";
+import SecondLayer from "./styles/SecondLayer";
+import Title from "./styles/Title";
+import Text from "./styles/Text";
 
 class Item extends Component {
     render() {
         return (
-            <div className={styles.block}>
-                <div className={styles.firstLayer}></div>
-                <div className={styles.secondLayer}></div>
-                <div className={styles.title}>{this.props.title}</div>
-                <div className={styles.text}>{this.props.text}</div>
-            </div>
+            <Block>
+                <FirstLayer />
+                <SecondLayer />
+                <Title>{this.props.title}</Title>
+                <Text>{this.props.text}</Text>
+            </Block>
         );
     }
 }

@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import styles from "./styles.module.css";
+import Block from './styles/Block';
 
 class Header extends Component {
     render() {
         return (
-            <div className={styles.block}>Header</div>
+            <Block>Header</Block>
         );
     }
 }

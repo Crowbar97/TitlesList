@@ -1,4 +1,6 @@
-.block {
+import styled from "styled-components";
+
+export default styled.div`
     width: auto;
     height: 120px;
     font-size: 50px;
@@ -7,4 +9,4 @@
     background-color: #d2d3d5;
     color: #272727;
     margin-bottom: 8px;
-}
+`;
