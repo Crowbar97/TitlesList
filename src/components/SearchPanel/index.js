@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
-import Block from "./styles/Block";
-import Form from "./styles/Form";
-import Input from "./styles/Input";
+import { Block, Form, Input } from './styles';
 import { observable, computed } from 'mobx';
 import { observer, inject } from 'mobx-react';
 

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Block from './styles/Block';
+import { Block } from './styles';
 import Item from '../Item/index';
 import { observer, inject } from 'mobx-react';
 

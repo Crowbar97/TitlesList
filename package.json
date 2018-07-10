@@ -6,7 +6,7 @@
   "scripts": {
     "start": "webpack-dev-server --mode development --open --hot",
     "build": "webpack -- mode production",
-    "json:server": "json-server --watch db.json"
+    "json-server": "json-server --watch db.json"
   },
   "author": "max",
   "license": "ISC",

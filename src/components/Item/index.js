@@ -1,9 +1,5 @@
 import React, { Component } from 'react';
-import Block from "./styles/Block";
-import FirstLayer from "./styles/FirstLayer";
-import SecondLayer from "./styles/SecondLayer";
-import Title from "./styles/Title";
-import Text from "./styles/Text";
+import { Block, FirstLayer, SecondLayer, Text, Title } from './styles';
 
 class Item extends Component {
     render() {

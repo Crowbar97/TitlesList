@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Wrapper from './styles/Wrapper';
+import { Wrapper } from './styles';
 import SearchPanel from '../SearchPanel/index';
 import Content from '../Content/index';
 
