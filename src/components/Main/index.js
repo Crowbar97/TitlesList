@@ -1,14 +1,15 @@
 import React, { Component } from 'react';
+import { Wrapper } from './styles';
 import SearchPanel from '../SearchPanel/index';
 import Content from '../Content/index';
 
 class Main extends Component {
     render() {
         return (
-            <div>
+            <Wrapper>
                 <SearchPanel />
                 <Content />
-            </div>
+            </Wrapper>
         );
     }
 }

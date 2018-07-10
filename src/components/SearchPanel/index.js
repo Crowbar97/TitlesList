@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import styles from "./styles.module.css";
+import { Block, Form, Input } from './styles';
 import { observable, computed } from 'mobx';
 import { observer, inject } from 'mobx-react';
 
@@ -29,12 +29,12 @@ class SearchPanel extends Component {
 
     render() {
         return (
-            <div className={styles.block}>
-                <form onSubmit={this.fetchItems}>
-                    <input type="text" onChange={this.refreshFilter} className={styles.input} placeholder="Search"/>
-                    <input type="submit" value="Go" disabled={this.filterIsEmpty} className={styles.button} />
-                </form>
-            </div>
+            <Block>
+                <Form onSubmit={this.fetchItems}>
+                    <Input type="text" onChange={this.refreshFilter} placeholder="Search" />
+                    <Input type="submit" value="Go" disabled={this.filterIsEmpty} />
+                </Form>
+            </Block>
         );
     }
 }

@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
-import styles from "./styles.module.css";
+import { Block, FirstLayer, SecondLayer, Text, Title } from './styles';
 
 class Item extends Component {
     render() {
         return (
-            <div className={styles.block}>
-                <div className={styles.firstLayer}></div>
-                <div className={styles.secondLayer}></div>
-                <div className={styles.title}>{this.props.title}</div>
-                <div className={styles.text}>{this.props.text}</div>
-            </div>
+            <Block>
+                <FirstLayer />
+                <SecondLayer />
+                <Title>{this.props.title}</Title>
+                <Text>{this.props.text}</Text>
+            </Block>
         );
     }
 }

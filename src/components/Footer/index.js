@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import styles from "./styles.module.css";
+import { Block } from './styles';
 
 class Footer extends Component {
     render() {
         return (
-            <div className={styles.block}>Sticky Footer</div>
+            <Block>Sticky Footer</Block>
         );
     }
 }
